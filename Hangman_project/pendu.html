@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pendu.css">
+    <title>Jeu du pendu</title>
+</head>
+
+<body>
+
+    <div id="welcome-screen">
+        <h1>Bienvenue chez Hangman Game Airlines !!! </h1>
+        <p>Les règles sont simples : devinez le mot pour pouvoir embarquer vers la destination mystère.<br>
+            Cliquez sur les lettres pour proposer une réponse.<br>
+            À chaque erreur, des vêtements disparaîtront de votre valise. Attention, vous n’avez que 10 essais pour
+            découvrir votre destination secrète et pour chaque nouvelle partie vous devez sélectionner un niveau de difficulté.</p>
+        <button onclick="startAudio()">Prêt à décoller ?</button>
+    </div>
+
+    <div id="root">
+        <div class="button">
+            <button class="facile">Facile</button>
+            <button class="moyen">Moyen</button>
+            <button class="difficile">Difficile</button>
+        </div>
+
+        <div id="word" class="word"></div>
+        <div class="keyboard" id="keyboard"></div>
+        <div id="message"></div>
+
+        <div id="recommencer-screen">
+            <button id="recommencer" onclick="recommencerJeu()">Recommencer</button>
+        </div>
+
+        <div class="suitcase-box">
+        </div>
+        <canvas id="confetti"></canvas>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+
+    <script src="mots_a_trouver.js"></script>
+    <script src="pendu.js"></script>
+    <audio id="background-music" src="Airport_Sounds.mp3" autoplay loop></audio>
+
+</body>
+
+</html>
